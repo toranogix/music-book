@@ -67,16 +67,19 @@ const Search = () => {
           </ScrollView>
         </View>
 
+
+
+
         {/* Ten popular books */}
         <View className="mt-10">
           <Text className="text-white text-xl font-bold px-6 mb-6" style={{fontFamily: 'Courier New'}}> Les livres les plus populaires </Text>
           <View
             style={{ borderWidth: 1, borderColor: '#444', borderRadius: 12, padding: 16, marginHorizontal: 12, backgroundColor: 'rgba(0,0,0,0.2)'}}>
             {books.slice(0, 10).map((book) => (
-              <View key={book.id} className="mr-2 mb-4" style={{ borderWidth: 1, borderColor: '#666', borderRadius: 8, padding: 12, marginBottom: 12, backgroundColor: 'rgba(255,255,255,0.03)'}}>
+              <View key={book.id} className="mr-2 mb-4 flex-row items-center" style={{ borderWidth: 1, borderColor: '#666', borderRadius: 8, padding: 12, marginBottom: 12, backgroundColor: 'rgba(255,255,255,0.03)'}}>
                 <View
                   style={[
-                    {width: 80,height: 120,borderRadius: 5,padding: 10,alignItems: 'center',justifyContent: 'center',marginLeft: 10,backgroundColor: book.color},]}
+                    {width: 80,height: 120,borderRadius: 5,padding: 10,alignItems: 'center',justifyContent: 'center',backgroundColor: book.color},]}
                   className="items-center justify-center p-3 mr-4">
                   {book.image && (
                     <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
@@ -84,12 +87,14 @@ const Search = () => {
                     </View>
                   )}
                 </View>
-                <Text className="text-white text-xs font-bold text-center px-2" numberOfLines={3} style={{ fontFamily: 'Courier New' }}> 
-                  {book.title}
-                </Text>
-                <Text className="text-gray-400 font-bold text-xs" style={{ fontFamily: 'Courier New' }}>
-                  {book.author}
-                </Text>
+                <View className="flex-1">
+                  <Text className="text-white text-sm font-bold mb-1" numberOfLines={2} style={{ fontFamily: 'Courier New' }}> 
+                    {book.title}
+                  </Text>
+                  <Text className="text-gray-400 font-bold text-xs" style={{ fontFamily: 'Courier New' }}>
+                    {book.author}
+                  </Text>
+                </View>
               </View>
             ))}
           </View>
@@ -97,6 +102,19 @@ const Search = () => {
 
 
 
+
+
+
+
+
+
+
+
+
+      {/*footer*/}
+      <View className="mt-56">
+        <Text className="text-white text-center text-sm" style={{fontFamily: 'Courier New'}}>© {new Date().getFullYear()} - All rights reserved -- developped by toranogix and mia-chan</Text>
+      </View>
       </ScrollView>
     </View>
   )

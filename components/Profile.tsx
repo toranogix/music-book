@@ -1,14 +1,14 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, SafeAreaView } from 'react-native'
 
 
 
 
 const Profile = () => {
   return (
-    <View className = "flex-1 bg-black mt-12">
+    <SafeAreaView className = "flex-1 bg-black">
         <Text className = "text-2xl font-bold"> Profil</Text>
-    </View>
+    </SafeAreaView>
   )
 }
 

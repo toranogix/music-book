@@ -91,6 +91,11 @@ const Home = () => {
 
         {/* Bottom padding for safe area */}
         <View className="h-20" />
+
+        {/*footer*/}
+        <View className="mt-56">
+          <Text className="text-white text-center text-sm" style={{fontFamily: 'Courier New'}}>© {new Date().getFullYear()} - All rights reserved -- developped by toranogix and mia-chan</Text>
+        </View>
       </ScrollView>
     </SafeAreaView>
   )
