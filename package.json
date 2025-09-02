@@ -20,6 +20,7 @@
     "expo-blur": "~14.1.5",
     "expo-build-properties": "~0.14.8",
     "expo-liquid-glass-view": "^0.1.8",
+    "expo-location": "~18.1.6",
     "expo-router": "~5.1.5",
     "expo-status-bar": "~2.2.3",
     "lucide-react": "^0.542.0",
@@ -30,8 +31,10 @@
     "react-native-dotenv": "^3.4.11",
     "react-native-reanimated": "~3.17.4",
     "react-native-safe-area-context": "5.4.0",
+    "react-native-webview": "^13.16.0",
     "tailwind-merge": "^3.3.1",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "expo-linear-gradient": "~14.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

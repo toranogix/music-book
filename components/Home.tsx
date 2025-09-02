@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, SafeAreaView, Text, ScrollView, StyleSheet, TextInput, Image, TouchableOpacity } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient';
 import { Ionicons } from '@expo/vector-icons';
 import { books } from '../src/bookTests';
 import { style } from '../src/style';
@@ -8,18 +9,21 @@ import { bookRead } from '../src/bookRead';
 
 
 const Home = () => {
+
+  {/* BookCover *
   const BookCover = ({ color, title }: { color: string; title: string }) => (
     <View style={[style.bookCover, { backgroundColor: color }]} className="items-center justify-center p-3">
       <Text className="text-white text-xs font-bold text-center px-2" numberOfLines={3} style={{fontFamily: 'Courier New'}}>
         {title}
       </Text>
     </View>
-  );
+  ); */}
 
 
   return (
-    <SafeAreaView className="flex-1 bg-black">
-
+    <LinearGradient colors={['#000000', '#552586']} start={{ x: 0.1, y: 0.4 }} end={{ x: 0.5, y: 1 }} style={{ flex: 1 }}>
+      <SafeAreaView className="flex-1">
+        
         {/* Homepage*/}
         <View className="flex-row items-center mt-6 px-6 pt-4 pb-6">
           <Image source={require('../assets/profile.png')} style={style.profileImage} className="mr-4" />
@@ -98,6 +102,7 @@ const Home = () => {
         </View>
       </ScrollView>
     </SafeAreaView>
+  </LinearGradient>
   )
 }
 

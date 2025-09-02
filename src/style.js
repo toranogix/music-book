@@ -22,7 +22,7 @@ export const style = StyleSheet.create({
       padding: 10,
     },
     inputText: {
-      fontSize: 16,
-      fontFamily: 'Poppins-Regular',
+      fontSize: 12,
+      fontFamily: 'Courier New',
     },
   })
