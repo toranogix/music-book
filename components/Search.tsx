@@ -3,6 +3,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { style } from '../src/style'; 
 import { books } from '~/bookTests';
 import { LinearGradient } from 'expo-linear-gradient';
+import { allGenres, popularGenres } from '../src/genres';
 
 const Search = () => {
   return (
@@ -14,7 +15,7 @@ const Search = () => {
           </View>
           
           {/* Search bar */}
-          <View className="flex-row items-center mt-3">
+          <View className="flex-row items-center mt-3 mb-3">
             <View className="flex-1 flex-row items-center bg-white rounded-full border border-gray-300 px-4 py-3 mr-3">
               <Ionicons name="search" size={25} color="black" />
               <Ionicons position="absolute" right={10} name="filter-outline" size={25} color="black" />
@@ -32,18 +33,29 @@ const Search = () => {
           {/*List of popular genres*/}
           <View className="mt-5">
             <Text className="text-white text-xl font-bold px-6 mb-6" style={{fontFamily: 'Courier New'}}> Genres populaires </Text>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-              {books.slice(0, 10).map((book) => (
-                <View key={book.id} className="items-center justify-center mr-2">
-                  <Text className="text-white text-sm font-medium mt-2 mb-1" style={{fontFamily: 'Courier New'}} numberOfLines={3} > {book.title.length > 10 ? book.title.slice(0, 15) + '...' : book.title} </Text>
-                  <Text className="text-gray-400  font-bold text-xs" style = {{fontFamily: 'Courier New'}}>{book.author}</Text>
-                </View>
-              ))}
-            </ScrollView>
+            <View
+              style={{ borderWidth: 1, borderColor: '#444', borderRadius: 12, padding: 16, marginHorizontal: 12, backgroundColor: 'rgba(0,0,0,0.2)', flexDirection: 'column', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center',}}
+            >
+              <View className="flex-row flex-wrap justify-center items-center w-full">
+                {popularGenres.map((genre) => (
+                  <View key={genre.id} className="mr-3 mb-3">
+                    <TouchableOpacity className="items-center justify-center">
+                      <Text
+                        className="text-white text-base font-medium bg-purple-800 rounded-full"
+                        style={{ fontFamily: 'Courier New', paddingHorizontal: 16, paddingVertical: 8, textAlign: 'center'}}
+                        numberOfLines={3}
+                        >
+                        {genre.name}
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
+                ))}
+              </View>
+            </View>
           </View>
 
           {/* Discover more books */}
-          <View className="mt-56">
+          <View className="mt-10">
             <Text className="text-white text-xl font-bold px-6 mb-6" style={{fontFamily: 'Courier New'}}> Découvrer plus de livres </Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
               {books.slice(50, 60).map((book) => (
