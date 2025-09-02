@@ -2,6 +2,7 @@ import Home from 'components/Home';
 import Map from 'components/Map';
 import Profile from 'components/Profile';
 import Search from 'components/Search';
+import Playmusic from 'components/Playmusic';
 import { View, Text, TouchableOpacity } from 'react-native';
 import './global.css';
 import { NavigationContainer } from '@react-navigation/native';
@@ -114,6 +115,11 @@ export default function App() {
         <Tab.Screen name="Map" component={Map} options={{
           tabBarIcon: ({size, color}) => (
             <Ionicons name="map" color={color} size={size} />
+          )
+        }}/>
+        <Tab.Screen name="Lecture" component={Playmusic} options={{
+          tabBarIcon: ({size, color}) => (
+            <Ionicons name="play" color={color} size={size} />
           )
         }}/>
         <Tab.Screen name="Profil" component={Profile} options={{
