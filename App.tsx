@@ -1,4 +1,5 @@
 import Home from 'components/Home';
+import Map from 'components/Map';
 import Profile from 'components/Profile';
 import Search from 'components/Search';
 import { View, Text, TouchableOpacity } from 'react-native';
@@ -108,6 +109,11 @@ export default function App() {
         <Tab.Screen name="Recherche" component={Search} options={{
           tabBarIcon: ({size, color}) => (
             <Ionicons name="search" color={color} size={size} />
+          )
+        }}/>
+        <Tab.Screen name="Map" component={Map} options={{
+          tabBarIcon: ({size, color}) => (
+            <Ionicons name="map" color={color} size={size} />
           )
         }}/>
         <Tab.Screen name="Profil" component={Profile} options={{

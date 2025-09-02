@@ -13,6 +13,7 @@
   "dependencies": {
     "@bottom-tabs/react-navigation": "^0.11.1",
     "@react-navigation/bottom-tabs": "^7.4.6",
+    "@rnmapbox/maps": "^10.1.42",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "expo": "53.0.22",
