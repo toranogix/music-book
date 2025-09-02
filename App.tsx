@@ -17,7 +17,7 @@ const Tab = createBottomTabNavigator();
 const CustomTabBar = ({ state, descriptors, navigation }: any) => {
   return (
     <BlurView
-      intensity={50}
+      intensity={60}
       tint="light"
       style={{
         position: 'absolute',
