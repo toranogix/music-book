@@ -117,7 +117,7 @@ export default function App() {
             <Ionicons name="map" color={color} size={size} />
           )
         }}/>
-        <Tab.Screen name="Lecture" component={Playmusic} options={{
+        <Tab.Screen name="Musique" component={Playmusic} options={{
           tabBarIcon: ({size, color}) => (
             <Ionicons name="play" color={color} size={size} />
           )

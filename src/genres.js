@@ -83,6 +83,22 @@ export const allGenres = [
     id: 21,
     name: "Science",
   },
+  {
+    id: 22,
+    name: "Manga",
+  },
+  {
+    id: 23,
+    name: "BD",
+  },
+  {
+    id: 24,
+    name: "Essai",
+  },
+  {
+    id: 25,
+    name: "Autobiographie",
+  },
 ];
 
 
@@ -111,5 +127,21 @@ export const popularGenres = [
   {
     id: 6,
     name: "Philosophie",
+  },
+  {
+    id: 7,
+    name: "Manga",
+  },
+  {
+    id: 8,
+    name: "BD",
+  },
+  {
+    id: 9,
+    name: "Essai",
+  },
+  {
+    id: 10,
+    name: "Autobiographie",
   }
 ];

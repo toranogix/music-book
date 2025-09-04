@@ -41,7 +41,7 @@ const Search = () => {
                   <View key={genre.id} className="mr-3 mb-3">
                     <TouchableOpacity className="items-center justify-center">
                       <Text
-                        className="text-white text-base font-medium bg-purple-800 rounded-full"
+                        className="text-white text-sm font-medium bg-purple-800 rounded-full"
                         style={{ fontFamily: 'Courier New', paddingHorizontal: 16, paddingVertical: 8, textAlign: 'center'}}
                         numberOfLines={3}
                         >
