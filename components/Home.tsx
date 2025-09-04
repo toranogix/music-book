@@ -48,7 +48,10 @@ const Home = () => {
                 <View style={[style.bookCover, { backgroundColor: book.color }]} className="items-center justify-center p-3">
                   {book.image && (
                     <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
-                      <Image source={{ uri: book.image }} style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}/>
+                      <Image 
+                        source={typeof book.image === 'string' ? { uri: book.image } : book.image} 
+                        style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}
+                      />
                     </View>
                   )}
                 </View>
@@ -71,12 +74,15 @@ const Home = () => {
             Livres du jour
           </Text>
           <ScrollView  horizontal  showsHorizontalScrollIndicator={false}>
-            {books.slice(40, 50).map((book) => (
+            {books.slice(0, 10).map((book) => (
               <View key={book.id} className="items-center justify-center mr-2">
                 <View style={[style.bookCover, { backgroundColor: book.color }]} className="items-center justify-center p-3">
                   {book.image && (
                     <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
-                      <Image source={{ uri: book.image }} style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}/>
+                      <Image 
+                        source={typeof book.image === 'string' ? { uri: book.image } : book.image} 
+                        style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}
+                      />
                     </View>
                   )}
                 </View>
@@ -96,12 +102,15 @@ const Home = () => {
         <View className="mt-10">
           <Text className="text-white text-lg font-bold px-6 mb-6" style={{fontFamily: 'Courier New'}}> Nouveaux livres ajoutés </Text>
           <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            {books.slice(10, 20).map((book) => (
+            {books.slice(25, 30).map((book) => (
               <View key={book.id} className="items-center justify-center mr-2">
                 <View style={[style.bookCover, { backgroundColor: book.color }]} className="items-center justify-center p-3">
                   {book.image && (
                     <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
-                      <Image source={{ uri: book.image }} style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}/>
+                      <Image 
+                        source={typeof book.image === 'string' ? { uri: book.image } : book.image} 
+                        style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}
+                      />
                     </View>
                   )}
                 </View>

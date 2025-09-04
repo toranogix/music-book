@@ -58,12 +58,15 @@ const Search = () => {
           <View className="mt-10">
             <Text className="text-white text-xl font-bold px-6 mb-6" style={{fontFamily: 'Courier New'}}> Découvrer plus de livres </Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-              {books.slice(50, 60).map((book) => (
+              {books.slice(10, 15).map((book) => (
                 <View key={book.id} className="items-center justify-center mr-2">
                   <View style={[style.bookCover, { backgroundColor: book.color, position: 'relative', overflow: 'hidden' }]} className="items-center justify-center p-3">
                     {book.image && (
                       <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image source={{ uri: book.image }} style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}/>
+                        <Image 
+                        source={typeof book.image === 'string' ? { uri: book.image } : book.image}
+                        style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}
+                        />
                       </View>
                     )}
 
@@ -75,16 +78,19 @@ const Search = () => {
             </ScrollView>
           </View>
 
-          {/* Ten latest books */}
+          {/* 5 latest books */}
           <View className="mt-10">
             <Text className="text-white text-xl font-bold px-6 mb-6" style={{fontFamily: 'Courier New'}}> Les derniers livres ajoutés </Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-              {books.slice(90, 100).map((book) => (
+              {books.slice(15, 20).map((book) => (
                 <View key={book.id} className="items-center justify-center mr-2">
                   <View style={[style.bookCover, { backgroundColor: book.color }]} className="items-center justify-center p-3" >
                     {book.image && (
                       <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image source={{ uri: book.image }} style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}/>
+                        <Image 
+                        source={typeof book.image === 'string' ? { uri: book.image } : book.image}
+                        style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}
+                        />
                       </View>
                     )}
                   </View>
@@ -102,7 +108,7 @@ const Search = () => {
             <Text className="text-white text-xl font-bold px-6 mb-6" style={{fontFamily: 'Courier New'}}> Les livres les plus populaires </Text>
             <View
               style={{ borderWidth: 1, borderColor: '#444', borderRadius: 12, padding: 16, marginHorizontal: 12, backgroundColor: 'rgba(0,0,0,0.2)'}}>
-              {books.slice(0, 10).map((book) => (
+              {books.slice(15, 25).map((book) => (
                 <View key={book.id} className="mr-2 mb-4 flex-row items-center" style={{ borderWidth: 1, borderColor: '#666', borderRadius: 8, padding: 12, marginBottom: 12, backgroundColor: 'rgba(255,255,255,0.03)'}}>
                   <View
                     style={[
@@ -110,7 +116,10 @@ const Search = () => {
                     className="items-center justify-center p-3 mr-4">
                     {book.image && (
                       <View style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, alignItems: 'center', justifyContent: 'center' }}>
-                        <Image source={{ uri: book.image }} style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}/>
+                        <Image 
+                        source={typeof book.image === 'string' ? { uri: book.image } : book.image}
+                        style={{ width: '100%', height: '100%', resizeMode: 'cover', borderRadius: 5, opacity: 0.85 }}
+                        />
                       </View>
                     )}
                   </View>
