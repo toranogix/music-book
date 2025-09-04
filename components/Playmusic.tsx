@@ -34,6 +34,7 @@ const Playmusic = () => {
   return (
     <LinearGradient colors={['#000000', '#552586']} start={{ x: 0.1, y: 0.4 }} end={{ x: 0.5, y: 1 }} style={{ flex: 1 }}>
       <SafeAreaView className="flex-1">
+
         {/* Header */}
         <View className="flex-row items-center justify-between px-6 mt-10 mb-8">
           <TouchableOpacity>
@@ -99,7 +100,7 @@ const Playmusic = () => {
         {/* Player Controls */}
         <View className="px-8 mb-10">
           <View className="flex-row items-center justify-center space-x-8 mb-6">
-            <TouchableOpacity className="w-12 h-12 items-center justify-center">
+            <TouchableOpacity className="w-16 h-16 items-center justify-center">
               <Ionicons name="play-skip-back" size={28} color="white" />
             </TouchableOpacity>
             
@@ -114,23 +115,23 @@ const Playmusic = () => {
               />
             </TouchableOpacity>
             
-            <TouchableOpacity className="w-14 h-14 items-center justify-center">
+            <TouchableOpacity className="w-16 h-16 items-center justify-center">
               <Ionicons name="play-skip-forward" size={28} color="white" />
             </TouchableOpacity>
           </View>
 
           {/* Additional Controls */}
-          <View className="flex-row items-center justify-center space-x-14">
-            <TouchableOpacity className="w-12 h-12 items-center justify-center">
-              <Ionicons name="shuffle" size={22} color="white" />
+          <View className="flex-row items-center justify-between space-x-16 ml-3 mr-3">
+            <TouchableOpacity className="w-12 h-12 items-center justify-between">
+              <Ionicons name="shuffle" size={28} color="white" />
             </TouchableOpacity>
             
-            <TouchableOpacity className="w-12 h-12 items-center justify-center">
-              <Ionicons name="repeat" size={22} color="white" />
+            <TouchableOpacity className="w-12 h-12 items-center justify-between">
+              <Ionicons name="repeat" size={28} color="white" />
             </TouchableOpacity>
             
-            <TouchableOpacity className="w-12 h-12 items-center justify-center">
-              <Ionicons name="list" size={22} color="white" />
+            <TouchableOpacity className="w-12 h-12 items-center justify-between">
+              <Ionicons name="list" size={28} color="white" />
             </TouchableOpacity>
           </View>
         </View>
